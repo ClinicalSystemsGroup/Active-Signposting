@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ID:816073823          this line should be moved to line 1 and the quotes removed before uploading to SystmOne: note that there are spaces after the end of the ID number which also need to be included-->
+<SystmOneProtocol>
+    <!--Exported on 20 Dec 2017 11:57-->
+    <!--Exported by EVANS, Griff-->
+    <TemplateDefinition Female="y" Male="y" Type="16">
+        <Protocol ManualTrigger="y">
+            <AutomaticTrigger>
+                <Trigger>None</Trigger>
+                <TriggerEveryOccurrence>false</TriggerEveryOccurrence>
+                <PromptToLaunchIfMultipleApply>true</PromptToLaunchIfMultipleApply>
+            </AutomaticTrigger>
+            <Node Uid="0" X="264" Y="24">Start</Node>
+            <Node Name="@eyeinf" Uid="1" X="204" Y="276">DeclareVariable</Node>
+            <Node Uid="2" X="240" Y="348">Question<Q>
+                    <p>
+                        <p>
+                            <t b="b" fnt="Arial" sz="16">"Do you have severe pain in the eyes?"</t>
+                        </p>
+                    </p>
+                </Q>
+                <Answer>Yes</Answer>
+                <Answer>No</Answer>
+            </Node>
+            <Node LeftVariable="@eyeinf" Operator="1"
+                RightConstant="1.0" Uid="3" Variable="@eyeinf" X="132" Y="444">AssignVariable</Node>
+            <Node Uid="4" X="132" Y="540">AddNote<Note>SEVERE pain in the eyes.</Note>
+            </Node>
+            <Node Uid="5" X="336" Y="444">AddNote<Note>NO severe pain in the eyes</Note>
+            </Node>
+            <Node ActionUid="SUBACTION~ConDetails~Template~1477"
+                Blocking="n" Uid="6" X="168" Y="192">Action</Node>
+            <Node Uid="7" X="240" Y="588">Question<Q>
+                    <p>
+                        <p>
+                            <t b="b" fnt="Arial" sz="16">"Have you had a sudden reduction in your vision?"</t>
+                        </p>
+                    </p>
+                </Q>
+                <Answer>Yes</Answer>
+                <Answer>No</Answer>
+            </Node>
+            <Node LeftVariable="@eyeinf" Operator="1"
+                RightConstant="1.0" Uid="9" Variable="@eyeinf" X="120" Y="672">AssignVariable</Node>
+            <Node Uid="10" X="168" Y="756">AddNote<Note>SUDDEN REDUCTION in vision.</Note>
+            </Node>
+            <Node Uid="11" X="300" Y="672">AddNote<Note>NO sudden reduction in vision</Note>
+            </Node>
+            <Node Name="@eyeinf" Uid="12" ValOne="0.0" X="216" Y="864">TestVariable</Node>
+            <Node Uid="13" X="96" Y="912">Info<p>
+                    <p>
+                        <t b="b" fnt="Arial" sz="18" u="u">INFORMATION to be relayed to PATIENT</t>
+                        <t b="b" fnt="Arial" u="u">:</t>
+                    </p>
+                    <p/>
+                    <p>
+                        <t b="b" fg="0xffff0000" fnt="Arial" sz="28">"The Doctor has advised this will need investigating further in Eye Casualty and requests that you attend the Eye Casualty Dept as soon as possible.  If Eye Casualty is closed, please go to A&amp;E"</t>
+                    </p>
+                    <p/>
+                    <p>
+                        <t fnt="Arial" sz="14">Mon – Fri: 8.30am – 5.00pm in eye outpatient area</t>
+                    </p>
+                    <p>
+                        <t fnt="Arial" sz="14">Sat: 9.00am – 5.00pm on Singlehurst day case unit</t>
+                    </p>
+                    <p>
+                        <t fnt="Arial" sz="14">Sun: 9.00am – 1.00pm on Singlehurst day case unit</t>
+                    </p>
+                    <p>
+                        <t b="b" fnt="Arial" sz="14">Main telephone number: 01604 545485</t>
+                    </p>
+                    <p/>
+                    <p>
+                        <t fnt="Arial" sz="14">How to find us</t>
+                    </p>
+                    <p>
+                        <t fnt="Arial" sz="14">Northampton General Hospital NHS Trust</t>
+                    </p>
+                    <p>
+                        <t fnt="Arial" sz="14">Cliftonville, Northampton NN1 5BD</t>
+                    </p>
+                    <p>
+                        <t fnt="Arial" sz="14">We are based in Area L, the nearest car park is car park 4</t>
+                    </p>
+                </p>
+            </Node>
+            <Node Uid="16" X="492" Y="960">Question<Q>
+                    <p>
+                        <p>
+                            <t b="b" fnt="Arial" sz="16">"Which eye is affected?"</t>
+                        </p>
+                    </p>
+                </Q>
+                <Answer>Left eye</Answer>
+                <Answer>Right Eye</Answer>
+                <Answer>Both Eyes</Answer>
+            </Node>
+            <Node Uid="17" X="372" Y="1044">AddNote<Note>LEFT eye is affected</Note>
+            </Node>
+            <Node Uid="18" X="528" Y="1044">AddNote<Note>RIGHT eye is affected</Note>
+            </Node>
+            <Node Uid="19" X="672" Y="1044">AddNote<Note>BOTH EYES are affected</Note>
+            </Node>
+            <Node Uid="20" X="672" Y="1152">Question<Q>
+                    <p>
+                        <p>
+                            <t b="b" fnt="Arial" sz="16">"Is there any redness in the white part of your eye?"</t>
+                        </p>
+                    </p>
+                </Q>
+                <Answer>Yes</Answer>
+                <Answer>No</Answer>
+            </Node>
+            <Node Uid="21" X="600" Y="1236">AddNote<Note>REDNESS in white part of eye</Note>
+            </Node>
+            <Node Uid="22" X="720" Y="1236">AddNote<Note>NO redness in white part of eye</Note>
+            </Node>
+            <Node Uid="23" X="684" Y="1320">Question<Q>
+                    <p>
+                        <p>
+                            <t b="b" fnt="Arial" sz="16">"Do you have sticky eyes or discharge?"</t>
+                        </p>
+                    </p>
+                </Q>
+                <Answer>Yes</Answer>
+                <Answer>No</Answer>
+            </Node>
+            <Node Uid="24" X="600" Y="1404">AddNote<Note>DISCHARGE from eye</Note>
+            </Node>
+            <Node Uid="25" X="732" Y="1404">AddNote<Note>NO Discharge from eye</Note>
+            </Node>
+            <Node Uid="26" X="696" Y="1500">Question<Q>
+                    <p>
+                        <p>
+                            <t b="b" fnt="Arial" sz="16">"Are they very watery?"</t>
+                        </p>
+                    </p>
+                </Q>
+                <Answer>Yes</Answer>
+                <Answer>No</Answer>
+            </Node>
+            <Node Uid="27" X="624" Y="1584">AddNote<Note>WATERING eyes</Note>
+            </Node>
+            <Node Uid="28" X="756" Y="1584">AddNote<Note>Eyes are NOT watering</Note>
+            </Node>
+            <Node Uid="29" X="696" Y="1704">Question<Q>
+                    <p>
+                        <p>
+                            <t b="b" fnt="Arial" sz="16">"Are they very itchy or gritty?"</t>
+                        </p>
+                    </p>
+                </Q>
+                <Answer>Yes</Answer>
+                <Answer>No</Answer>
+            </Node>
+            <Node Uid="30" X="612" Y="1824">AddNote<Note>ITCHY/GRITTY eye</Note>
+            </Node>
+            <Node Uid="31" X="768" Y="1824">AddNote<Note>NO itching/gritty feeling in eye</Note>
+            </Node>
+            <Node Uid="33" X="696" Y="1992">Question<Q>
+                    <p>
+                        <p>
+                            <t b="b" fnt="Arial" sz="16">"Do you have cough or cold symptons?"</t>
+                        </p>
+                    </p>
+                </Q>
+                <Answer>Yes</Answer>
+                <Answer>No</Answer>
+            </Node>
+            <Node Uid="34" X="648" Y="2088">AddNote<Note>COUGH/COLD symptoms</Note>
+            </Node>
+            <Node Uid="35" X="756" Y="2088">AddNote<Note>NO cough/cold symptoms</Note>
+            </Node>
+            <Node Uid="50" X="708" Y="2568">Info<p>
+                    <p>
+                        <t b="b" fg="0xff333333" fnt="Arial" sz="18" u="u">Message to patient:</t>
+                    </p>
+                    <p/>
+                    <p>
+                        <t b="b" fg="0xff000099" fnt="Arial" sz="18">"Thank you for answering all the questions.</t>
+                    </p>
+                    <p>
+                        <t b="b" fg="0xff000099" fnt="Arial" sz="18">With all eye infections we always advise to wash the eye out on regular occasions with cool boiled water.</t>
+                    </p>
+                    <p/>
+                    <p>
+                        <t b="b" fg="0xff000099" fnt="Arial" sz="18">The Dr will decide, based on your answers, the best course of treatment which may be drops or advice.</t>
+                    </p>
+                    <p/>
+                    <p>
+                        <t b="b" fg="0xff000099" fnt="Arial" sz="18">You will be contacted by a member of our team as soon as possible.</t>
+                    </p>
+                    <p/>
+                    <p>
+                        <t b="b" fg="0xff000099" fnt="Arial" sz="18">Please keep your phone with you.  Our call may come up as Caller ID Withheld."</t>
+                    </p>
+                </p>
+            </Node>
+            <Node
+                ActionUid="SUBACTION~DLG_New Task...~ApplyTemplateNoUserInput~120919"
+                Blocking="n" Uid="58" X="0" Y="1596">Action</Node>
+            <Node KeyTemplate="108616" Uid="88" X="660" Y="2460">Protocol</Node>
+            <Node Uid="94" X="252" Y="108">AddNote<Note>Patient complaining of eye condition.</Note>
+                <Note>Patient states following symptoms:</Note>
+            </Node>
+            <Node Uid="96" X="384" Y="96">Info<p>
+                    <p>
+                        <t b="b" fnt="Arial" sz="16">"The Doctor would like us to ask you some questions about your symptoms"</t>
+                    </p>
+                </p>
+            </Node>
+            <Node Uid="97" X="72" Y="1116">Question<Q>
+                    <p>
+                        <p>
+                            <t b="b" fnt="Arial" sz="16" u="u">NOTE FOR STAFF</t>
+                            <t b="b" fnt="Arial" sz="16">:</t>
+                        </p>
+                        <p/>
+                        <p>
+                            <t b="b" fnt="Arial" sz="16">Please indicate whether the patient has accepted or refused to go to the Eye Casualty Department.</t>
+                        </p>
+                    </p>
+                </Q>
+                <Answer>Accepted</Answer>
+                <Answer>Refused</Answer>
+            </Node>
+            <Node Code="8HC2." Uid="98" X="48" Y="1296">AddCode</Node>
+            <Node Code="Y1263" Uid="99" X="228" Y="1212">AddCode</Node>
+            <Node Uid="100" X="96" Y="1044">AddNote<Note>Information given to the Patient</Note>
+                <Note/>
+                <Note>"The Doctor has advised this will need investigating further in Eye Casualty and requests that you attend the Eye Casualty Dept as soon as possible.  If Eye Casualty is closed, please go to A&amp;E"</Note>
+            </Node>
+            <Node KeyTemplate="123792" Uid="102" X="660" Y="2232">Protocol</Node>
+            <Node Uid="103" X="720" Y="2712">AddNote<Note>The Patient was provided with the following advice/instructions</Note>
+                <Note>"With all eye infections we always advise to wash the eye out on regular occasions with cool boiled water.</Note>
+                <Note>The Doctorr will decide, based on your answers, the best course of treatment which may be drops or advice.</Note>
+                <Note>You will be contacted by a member of our team as soon as possible.</Note>
+                <Note>Please keep your phone with you.  Our call may come up as Caller ID Withheld."</Note>
+            </Node>
+            <Node Uid="106" X="684" Y="1896">Question<Q>
+                    <p>
+                        <p>
+                            <t b="b" fnt="Arial" sz="16">"Do you wear contact lenses?"</t>
+                        </p>
+                    </p>
+                </Q>
+                <Answer>Yes</Answer>
+                <Answer>No</Answer>
+            </Node>
+            <Node Uid="108" X="576" Y="1944">AddNote<Note>WEARS Contact Lenses</Note>
+            </Node>
+            <Node Uid="110" X="816" Y="1944">AddNote<Note>Does NOT wear Contact Lenses</Note>
+            </Node>
+            <Node Uid="113" X="60" Y="1392">AddNote<Note>Patient ACCEPTED advice to attend the Eye Casualty Department</Note>
+            </Node>
+            <Node Uid="114" X="228" Y="1128">Info<p>
+                    <p>
+                        <t b="b" fnt="Arial" sz="18" u="u">Message to Patient:</t>
+                    </p>
+                    <p/>
+                    <p>
+                        <t b="b" fg="0xffff0000" fnt="Arial" sz="28">"We will pass the information on to the Doctor, that you have refused the advice to attend Eye Casualty." </t>
+                    </p>
+                    <p/>
+                    <p>
+                        <t b="b" fnt="Arial" sz="16" u="u">Staff Information:</t>
+                    </p>
+                    <p/>
+                    <p>
+                        <t b="b" fnt="Arial" sz="16">Add to Duty Dr list - DO NOT mark as finished</t>
+                    </p>
+                    <p>
+                        <t b="b" fnt="Arial" sz="16">Use appointment preset of 'Refused to Attend A&amp;E'</t>
+                    </p>
+                </p>
+            </Node>
+            <Node KeyTemplate="121288" Uid="115" X="660" Y="2376">Protocol</Node>
+            <Node ActionUid="SCRN_Appointment Ledger" Blocking="n"
+                Uid="116" X="216" Y="1476">Action</Node>
+            <Node ActionUid="SCRN_Appointment Ledger" Blocking="n"
+                Uid="117" X="36" Y="1476">Action</Node>
+            <Node Uid="119" X="228" Y="1332">AddNote<Note>Patient DID NOT accept advice to attend the Eye Casualty Department</Note>
+            </Node>
+            <Node Uid="121" X="48" Y="1212">Info<p>
+                    <p>
+                        <t b="b" fnt="Arial" sz="18" u="u">Message to Patient:</t>
+                    </p>
+                    <p/>
+                    <p>
+                        <t b="b" fnt="Arial" sz="22">"We will pass the information on to the Doctor, that you have accepted the advice to attend Eye Casualty." </t>
+                    </p>
+                    <p/>
+                    <p>
+                        <t b="b" fnt="Arial" sz="16" u="u">Staff Information:</t>
+                    </p>
+                    <p/>
+                    <p>
+                        <t b="b" fnt="Arial" sz="16">Add to Duty Dr list - mark as FINISHED</t>
+                    </p>
+                    <p>
+                        <t b="b" fnt="Arial" sz="16">Use appointment preset of ' Attending A&amp;E'</t>
+                    </p>
+                </p>
+            </Node>
+            <Node KeyTemplate="108614" Uid="123" X="660" Y="2304">Protocol</Node>
+            <Node Uid="125" X="96" Y="984">AddNote<Note>-</Note>
+                <Note/>
+            </Node>
+            <Node ActionUid="SCRN_Appointment Ledger" Blocking="n"
+                Uid="126" X="696" Y="2796">Action</Node>
+            <Node Code="8H9.." Uid="127" X="720" Y="2880">AddCode</Node>
+            <Node Uid="128" X="720" Y="2964">AddNote<Note>Patient placed on telephone triage list</Note>
+            </Node>
+            <Node Uid="129" X="720" Y="2640">AddNote<Note>-</Note>
+                <Note/>
+            </Node>
+            <Node Uid="130" X="708" Y="2160">AddNote<Note>-</Note>
+                <Note/>
+            </Node>
+            <Link EndUid="3" StartIndex="0" StartUid="2"/>
+            <Link EndUid="4" StartIndex="0" StartUid="3"/>
+            <Link EndUid="5" StartIndex="1" StartUid="2"/>
+            <Link EndUid="7" StartIndex="0" StartUid="4"/>
+            <Link EndUid="7" StartIndex="0" StartUid="5"/>
+            <Link EndUid="9" StartIndex="0" StartUid="7"/>
+            <Link EndUid="10" StartIndex="0" StartUid="9"/>
+            <Link EndUid="11" StartIndex="1" StartUid="7"/>
+            <Link EndUid="12" StartIndex="0" StartUid="10"/>
+            <Link EndUid="12" StartIndex="0" StartUid="11"/>
+            <Link EndUid="13" StartIndex="0" StartUid="12"/>
+            <Link EndUid="125" StartIndex="0" StartUid="13"/>
+            <Link EndUid="16" StartIndex="1" StartUid="12"/>
+            <Link EndUid="17" StartIndex="0" StartUid="16"/>
+            <Link EndUid="18" StartIndex="1" StartUid="16"/>
+            <Link EndUid="19" StartIndex="2" StartUid="16"/>
+            <Link EndUid="20" StartIndex="0" StartUid="17"/>
+            <Link EndUid="20" StartIndex="0" StartUid="18"/>
+            <Link EndUid="20" StartIndex="0" StartUid="19"/>
+            <Link EndUid="21" StartIndex="0" StartUid="20"/>
+            <Link EndUid="22" StartIndex="1" StartUid="20"/>
+            <Link EndUid="23" StartIndex="0" StartUid="21"/>
+            <Link EndUid="23" StartIndex="0" StartUid="22"/>
+            <Link EndUid="24" StartIndex="0" StartUid="23"/>
+            <Link EndUid="25" StartIndex="1" StartUid="23"/>
+            <Link EndUid="26" StartIndex="0" StartUid="24"/>
+            <Link EndUid="26" StartIndex="0" StartUid="25"/>
+            <Link EndUid="27" StartIndex="0" StartUid="26"/>
+            <Link EndUid="28" StartIndex="1" StartUid="26"/>
+            <Link EndUid="29" StartIndex="0" StartUid="27"/>
+            <Link EndUid="29" StartIndex="0" StartUid="28"/>
+            <Link EndUid="30" StartIndex="0" StartUid="29"/>
+            <Link EndUid="31" StartIndex="1" StartUid="29"/>
+            <Link EndUid="106" StartIndex="0" StartUid="30"/>
+            <Link EndUid="106" StartIndex="0" StartUid="31"/>
+            <Link EndUid="35" StartIndex="1" StartUid="33"/>
+            <Link EndUid="34" StartIndex="0" StartUid="33"/>
+            <Link EndUid="129" StartIndex="0" StartUid="50"/>
+            <Link EndUid="96" StartIndex="0" StartUid="0"/>
+            <Link EndUid="1" StartIndex="0" StartUid="6"/>
+            <Link EndUid="2" StartIndex="0" StartUid="1"/>
+            <Link EndUid="6" StartIndex="0" StartUid="94"/>
+            <Link EndUid="94" StartIndex="0" StartUid="96"/>
+            <Link EndUid="121" StartIndex="0" StartUid="97"/>
+            <Link EndUid="97" StartIndex="0" StartUid="100"/>
+            <Link EndUid="130" StartIndex="0" StartUid="34"/>
+            <Link EndUid="130" StartIndex="0" StartUid="35"/>
+            <Link EndUid="108" StartIndex="0" StartUid="106"/>
+            <Link EndUid="110" StartIndex="1" StartUid="106"/>
+            <Link EndUid="33" StartIndex="0" StartUid="108"/>
+            <Link EndUid="33" StartIndex="0" StartUid="110"/>
+            <Link EndUid="113" StartIndex="0" StartUid="98"/>
+            <Link EndUid="117" StartIndex="0" StartUid="113"/>
+            <Link EndUid="119" StartIndex="0" StartUid="99"/>
+            <Link EndUid="123" StartIndex="0" StartUid="102"/>
+            <Link EndUid="88" StartIndex="0" StartUid="115"/>
+            <Link EndUid="114" StartIndex="1" StartUid="97"/>
+            <Link EndUid="58" StartIndex="0" StartUid="117"/>
+            <Link EndUid="58" StartIndex="0" StartUid="116"/>
+            <Link EndUid="116" StartIndex="0" StartUid="119"/>
+            <Link EndUid="99" StartIndex="0" StartUid="114"/>
+            <Link EndUid="98" StartIndex="0" StartUid="121"/>
+            <Link EndUid="50" StartIndex="0" StartUid="88"/>
+            <Link EndUid="100" StartIndex="0" StartUid="125"/>
+            <Link EndUid="126" StartIndex="0" StartUid="103"/>
+            <Link EndUid="127" StartIndex="0" StartUid="126"/>
+            <Link EndUid="128" StartIndex="0" StartUid="127"/>
+            <Link EndUid="103" StartIndex="0" StartUid="129"/>
+            <Link EndUid="115" StartIndex="0" StartUid="123"/>
+            <Link EndUid="102" StartIndex="0" StartUid="130"/>
+        </Protocol>
+        <Name>006 Eye Conditions</Name>
+        <Description/>
+        <Category>Xap</Category>
+        <Icon>eyeBall</Icon>
+        <Source>71211</Source>
+        <SourceGroup>-1</SourceGroup>
+        <Position>-1j-36d1d-3k113s-21b3t19292n-t-3p-3a3h1o3g1735f-1o3u-31-1p3e2d-2s3m1d3a</Position>
+    </TemplateDefinition>
+</SystmOneProtocol>
